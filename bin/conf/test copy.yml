@@ -1,0 +1,63 @@
+logs:
+    - name: root
+      level: info
+      formatter: '%d%T%m%n'
+      appenders:
+          - type: FileLogAppender
+            file: /root/Web-learning/sylar/root.txt
+          - type: StdoutLogAppender
+    - name: system
+      level: info
+      formatter: '%d%T%m%n'
+      appenders:
+          - type: FileLogAppender
+            file: /root/Web-learning/sylar/system.txt
+          - type: StdoutLogAppender
+system:
+    port: 9900
+    value: 15
+    vec: 
+      - 11
+      - 12
+      - 13
+    list: [6,7]
+    set: [10,10,20,20]
+    uset: [10,10,20,20,30]
+    str_int_map:
+      k: 1
+      k2: 2
+      k3: 3
+    str_int_umap:
+      k: 11
+      k2: 22
+      k3: 32
+
+class:
+  person:
+    name: ikun
+    age: 25
+    sex: true
+  map:
+    person1:
+      name: ikun2
+      age: 252
+      sex: true
+    person2:
+      name: ikun3
+      age: 152
+      sex: false
+  vec_map:
+    vec1:
+      - name: ikun
+        age: 25
+        sex: true
+      - name: ikun2
+        age: 252
+        sex: true
+    vec2:
+      - name: ikun4
+        age: 225
+        sex: true
+      - name: ikun21
+        age: 2152
+        sex: true
