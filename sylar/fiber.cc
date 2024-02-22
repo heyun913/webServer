@@ -3,6 +3,7 @@
 #include "macro.h"
 #include <atomic>
 #include "log.h"
+#include"scheduler.h"
 
 namespace sylar {
 
@@ -119,22 +120,39 @@ void Fiber::SetThis(Fiber* f) {
     t_fiber = f;
 }
 
+void Fiber::call() { // 特殊的swapIn,强行将当前线程置换成目标线程
+    SetThis(this);
+    m_state = EXEC;
+    // SYLAR_ASSERT(GetThis() == t_threadFiber);
+    if(swapcontext(&t_threadFiber->m_ctx, &m_ctx)) {
+        SYLAR_ASSERT2(false, "swapcontext");
+    }
+}
+
 void Fiber::swapIn() {
     SetThis(this);
     SYLAR_ASSERT(m_state != EXEC);
     // 因为要执行切换，所以改为运行状态
     m_state =EXEC;
-    if(swapcontext(&t_threadFiber->m_ctx, &m_ctx)) {
+    if(swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx)) {
         SYLAR_ASSERT2(false, "swapcontext");
     }
 
 }
 
 void Fiber::swapOut() {
-    SetThis(t_threadFiber.get());
-    if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
-        SYLAR_ASSERT2(false, "swapcontext");
+    if(this != Scheduler::GetMainFiber()) {
+        SetThis(Scheduler::GetMainFiber());
+        if(swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx)) {
+            SYLAR_ASSERT2(false, "swapcontext");
+        }
+    } else {
+        SetThis(t_threadFiber.get());
+        if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
+            SYLAR_ASSERT2(false, "swapcontext");
+        }
     }
+
 }
 
 Fiber::ptr Fiber::GetThis() {
@@ -182,10 +200,14 @@ void Fiber::MainFunc() {
         cur->m_state = TERM;
     } catch(std::exception& ex) {
         cur->m_state = EXCEPT;
-        SYLAR_LOG_ERROR(g_logger) << "Fiber Except: " << ex.what(); 
+        SYLAR_LOG_ERROR(g_logger) << "Fiber Except: " << ex.what() 
+            << " fiber_id=" << cur->getId()
+            << std::endl << sylar::BacktraceToString(); 
     } catch(...) {
         cur->m_state = EXCEPT;
-        SYLAR_LOG_ERROR(g_logger) << "Fiber Except: ";
+        SYLAR_LOG_ERROR(g_logger) << "Fiber Except: " 
+            << " fiber_id=" << cur->getId()
+            << std::endl << sylar::BacktraceToString(); 
     }
     // 这里cur获得一个智能指针导致计数器加一，但是由于最后没有释放，它会一直在栈上面，所以
     // 该对象的智能指针计数永远大于等于1，无法被释放
@@ -194,7 +216,7 @@ void Fiber::MainFunc() {
     // 返回主协程
     raw_ptr->swapOut();
 
-    SYLAR_ASSERT2(false, "never reach");
+    SYLAR_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw_ptr->getId()));
 }
 
 

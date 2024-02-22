@@ -1,5 +1,6 @@
 /root/Web-learning/sylar/CMakeFiles/rebuild_cache.dir
 /root/Web-learning/sylar/CMakeFiles/edit_cache.dir
+/root/Web-learning/sylar/CMakeFiles/test_scheduler.dir
 /root/Web-learning/sylar/CMakeFiles/test.dir
 /root/Web-learning/sylar/CMakeFiles/sylar.dir
 /root/Web-learning/sylar/CMakeFiles/test_config.dir

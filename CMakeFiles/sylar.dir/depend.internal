@@ -45,6 +45,7 @@ CMakeFiles/sylar.dir/sylar/fiber.cc.o
  /root/Web-learning/sylar/sylar/fiber.h
  /root/Web-learning/sylar/sylar/log.h
  /root/Web-learning/sylar/sylar/macro.h
+ /root/Web-learning/sylar/sylar/scheduler.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.h
@@ -117,6 +118,15 @@ CMakeFiles/sylar.dir/sylar/log.cc.o
  include/yaml-cpp/stlemitter.h
  include/yaml-cpp/traits.h
  include/yaml-cpp/yaml.h
+CMakeFiles/sylar.dir/sylar/scheduler.cc.o
+ /root/Web-learning/sylar/sylar/fiber.h
+ /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/macro.h
+ /root/Web-learning/sylar/sylar/scheduler.cc
+ /root/Web-learning/sylar/sylar/scheduler.h
+ /root/Web-learning/sylar/sylar/singleton.h
+ /root/Web-learning/sylar/sylar/thread.h
+ /root/Web-learning/sylar/sylar/util.h
 CMakeFiles/sylar.dir/sylar/thread.cc.o
  /root/Web-learning/sylar/sylar/log.h
  /root/Web-learning/sylar/sylar/singleton.h

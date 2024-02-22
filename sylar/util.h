@@ -17,9 +17,9 @@ pid_t GetTreadId();
 uint32_t GetFiberId();
 
 // 获取函数调用栈
-void Backtrace(std::vector<std::string>& bt, int size, int skip = 1); // size：输出栈的大小；skip：跳过前几个输出
+void Backtrace(std::vector<std::string>& bt, int size = 64, int skip = 1); // size：输出栈的大小；skip：跳过前几个输出
 
-std::string BacktraceToString(int size, int skip = 2,const std::string& prefix = "");
+std::string BacktraceToString(int size = 64, int skip = 2,const std::string& prefix = "");
 
 }
 

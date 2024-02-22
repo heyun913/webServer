@@ -9,8 +9,9 @@
 namespace sylar {
 
 // 继承了enable_shared_from_this不能在栈上创建成员
-
+class Scheduler;
 class Fiber : public std::enable_shared_from_this<Fiber> {
+friend class Scheduler;
 public:
     typedef std::shared_ptr<Fiber> ptr;
 
@@ -41,7 +42,11 @@ public:
     // 切换到后台执行
     void swapOut();
     
+    void call();
+
     uint64_t getId() const { return m_id; }
+
+    State getState() const { return m_state; }
 public:
     // 设置当前协程
     static void SetThis(Fiber* f);

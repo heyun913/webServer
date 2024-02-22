@@ -9,5 +9,6 @@
 #include "./sylar/thread.h"
 #include "./sylar/util.h"
 #include "./sylar/fiber.h"
+#include "./sylar/scheduler.h"
 
 #endif
