@@ -33,7 +33,7 @@ public:
 private:
     Fiber();
 public:
-    Fiber(std::function<void()> cb, size_t stacksize = 0);
+    Fiber(std::function<void()> cb, size_t stacksize = 0, bool use_caller = false);
     ~Fiber();
     // 重置协程函数，并重置状态
     void reset(std::function<void()> cb);
@@ -43,6 +43,8 @@ public:
     void swapOut();
     
     void call();
+
+    void back();
 
     uint64_t getId() const { return m_id; }
 
@@ -62,6 +64,8 @@ public:
     static uint64_t GetFiberId();
 
     static void MainFunc();
+
+    static void CallerMainFunc();
 private:
     uint64_t m_id = 0;  //协程id
     uint32_t m_stacksize = 0;   // 携程运行栈的大小
