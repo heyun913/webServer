@@ -70,6 +70,7 @@ protected:
     // 设置当前的协程调度器
     void setThis();
     // 是否有空闲线程
+    bool hasIdleThreads() { return m_idleThreadCount > 0; }
 private:
     // 协程调度启动(无锁)
     template<class FiberOrCb>

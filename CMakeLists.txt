@@ -20,6 +20,7 @@ set(LIB_SRC
     sylar/thread.cc
     sylar/fiber.cc
     sylar/scheduler.cc
+    sylar/iomanager.cc
     )
 
 add_library(sylar SHARED ${LIB_SRC})
@@ -65,6 +66,11 @@ add_executable(test_scheduler tests/test_scheduler.cc)
 add_dependencies(test_scheduler sylar)
 force_redefine_file_macro_for_sources(test_scheduler) #__FILE__ 重定义该宏为相对路径
 target_link_libraries(test_scheduler ${LIB_LIB})
+
+add_executable(test_iomanager tests/test_iomanager.cc)
+add_dependencies(test_iomanager sylar)
+force_redefine_file_macro_for_sources(test_iomanager) #__FILE__ 重定义该宏为相对路径
+target_link_libraries(test_iomanager ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
