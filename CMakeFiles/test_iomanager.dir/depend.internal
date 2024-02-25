@@ -45,3 +45,4 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  sylar/iomanager.h
  sylar/scheduler.h
  sylar/sylar.h
+ sylar/timer.h

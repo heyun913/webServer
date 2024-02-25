@@ -2,16 +2,17 @@
 #define __SYLAR_IOMANAGER_H__
 
 #include "scheduler.h"
+#include"timer.h"
 
 namespace sylar {
 
-class IOManager : public Scheduler {
+class IOManager : public Scheduler, public TimerManager {
 public:
     typedef std::shared_ptr<IOManager> ptr;
     typedef RWMutex RWMutexType;
-
-    enum Event { // 事件类型
-        NONE = 0x0,
+    // 事件类型
+    enum Event { 
+        NONE = 0x0, // 无事件
         READ = 0x1, // EPOLLIN
         WRITE = 0x4 // EPOLLOUT
     };
@@ -26,9 +27,11 @@ private:
             std::function<void()> cb; // 事件的回调函数
         };
 
-        // 获得事件
+        // 获得事件上下文
         EventContext& getContext(Event event);
+        // 重置事件上下文
         void resetContext(EventContext& ctx);
+        // 触发事件
         void triggerEvent(Event event);
 
         int fd = 0; // 事件关联的句柄
@@ -42,7 +45,9 @@ public:
     ~IOManager();
 
     // 0 success, -1 error
+    // 添加事件
     int addEvent(int fd, Event event, std::function<void()> cb = nullptr);
+    // 删除事件
     bool delEvent(int fd, Event event);
     bool cancelEvent(int fd, Event event);
     bool cancelAll(int fd);
@@ -53,16 +58,18 @@ public:
 protected:
     void tickle() override;
     bool stopping() override;
+    bool stopping(uint64_t& timeout);
     void idle() override;
+    void onTimerInsertedAtFront() override;
 
     void contextResize(size_t size);
 
 private:
-    int m_epfd = 0;
-    int m_tickleFds[2]; // pipe
-    std::atomic<size_t> m_pendingEventCount = {0};
-    RWMutexType m_mutex;
-    std::vector<FdContext*> m_fdContexts;
+    int m_epfd = 0; // epoll文件句柄
+    int m_tickleFds[2]; // pipe文件句柄，其中fd[0]表示读端，fd[1] 表示写端
+    std::atomic<size_t> m_pendingEventCount = {0}; // 等待执行的事件数量
+    RWMutexType m_mutex; // 互斥锁
+    std::vector<FdContext*> m_fdContexts; //socket事件上下文容器
 };
 
 }

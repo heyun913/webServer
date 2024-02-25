@@ -44,4 +44,5 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: include/yaml-cpp/yaml.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: sylar/iomanager.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: sylar/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: sylar/sylar.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: sylar/timer.h
 
