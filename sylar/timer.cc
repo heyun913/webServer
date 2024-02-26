@@ -202,7 +202,8 @@ void TimerManager::addTimer(Timer::ptr val,RWMutextType::WriteLock& lock) {
     // 添加到定时器集合
     auto it = m_timers.insert(val).first;
     // 如果该定时器是超时时间最短 并且 没有设置触发onTimerInsertedAtFront
-    bool at_front = (it == m_timers.begin() && !m_tickled);
+    // bool at_front = (it == m_timers.begin() && !m_tickled);
+    bool at_front = (it == m_timers.begin()) && !m_tickled;
     if(at_front) {
         // 设置触发onTimerInsertedAtFront
         m_tickled = true; // 频繁修改时不用一直执行onTimerInsertedAtFront，提高效率 

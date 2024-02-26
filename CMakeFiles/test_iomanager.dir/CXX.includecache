@@ -45,10 +45,14 @@ ucontext.h
 -
 memory
 -
-thread.h
-./sylar/thread.h
 functional
 -
+
+./sylar/iomanager.h
+scheduler.h
+./sylar/scheduler.h
+timer.h
+./sylar/timer.h
 
 ./sylar/log.h
 string
@@ -116,6 +120,16 @@ semaphore.h
 mutex
 -
 
+./sylar/timer.h
+memory
+-
+set
+-
+vector
+-
+thread.h
+./sylar/thread.h
+
 ./sylar/util.h
 pthread.h
 -
@@ -135,8 +149,6 @@ string
 /root/Web-learning/sylar/tests/test_iomanager.cc
 sylar/sylar.h
 /root/Web-learning/sylar/tests/sylar/sylar.h
-sylar/iomanager.h
-/root/Web-learning/sylar/tests/sylar/iomanager.h
 sys/types.h
 -
 sys/socket.h
@@ -504,28 +516,6 @@ include/yaml-cpp/yaml-cpp/node/parse.h
 yaml-cpp/node/emit.h
 include/yaml-cpp/yaml-cpp/node/emit.h
 
-sylar/iomanager.h
-scheduler.h
-sylar/scheduler.h
-timer.h
-sylar/timer.h
-
-sylar/scheduler.h
-memory
--
-vector
--
-list
--
-iostream
--
-atomic
--
-fiber.h
-sylar/fiber.h
-thread.h
-sylar/thread.h
-
 sylar/sylar.h
 ./sylar/macro.h
 sylar/./sylar/macro.h
@@ -543,14 +533,8 @@ sylar/./sylar/util.h
 sylar/./sylar/fiber.h
 ./sylar/scheduler.h
 sylar/./sylar/scheduler.h
-
-sylar/timer.h
-memory
--
-set
--
-vector
--
-thread.h
-sylar/thread.h
+./sylar/iomanager.h
+sylar/./sylar/iomanager.h
+./sylar/timer.h
+sylar/./sylar/timer.h
 

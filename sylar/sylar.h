@@ -10,5 +10,7 @@
 #include "./sylar/util.h"
 #include "./sylar/fiber.h"
 #include "./sylar/scheduler.h"
+#include "./sylar/iomanager.h"
+#include "./sylar/timer.h"
 
 #endif

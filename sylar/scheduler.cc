@@ -1,6 +1,7 @@
 #include "scheduler.h"
 #include "log.h"
 #include "macro.h"
+#include "hook.h"
 
 
 namespace sylar {
@@ -165,6 +166,8 @@ void Scheduler::setThis() {
 
 void Scheduler::run() {
     SYLAR_LOG_INFO(g_logger) << "run()";
+    // 启动hook
+    set_hook_enable(true);
     // 设置当前调度器
     setThis();
     // 非user_caller线程，设置主协程为线程主协程
@@ -203,12 +206,14 @@ void Scheduler::run() {
                 // 取出该任务
                 ft = *it;
                 // 从任务队列中清除
+                // m_fibers.erase(it++);
                 m_fibers.erase(it);
                 ++ m_activeThreadCount;
                 is_active = true;
                 // 跳出
                 break;
             }
+            // tickle_me |= it != m_fibers.end();
         }
         // 取到任务tickle一下
         if(tickle_me) {
@@ -223,7 +228,6 @@ void Scheduler::run() {
             // 执行完成，活跃的线程数量减-1
             -- m_activeThreadCount;
 
-            ft.fiber->swapIn();
             // 如果线程的状态被置为了READY
             if(ft.fiber->getState() == Fiber::READY) {
                 // 将fiber重新加入到任务队列中

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Web-learning/sylar/sylar/config.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/config.cc.o"
   "/root/Web-learning/sylar/sylar/fiber.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/fiber.cc.o"
+  "/root/Web-learning/sylar/sylar/hook.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/hook.cc.o"
   "/root/Web-learning/sylar/sylar/iomanager.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/iomanager.cc.o"
   "/root/Web-learning/sylar/sylar/log.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/log.cc.o"
   "/root/Web-learning/sylar/sylar/scheduler.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/scheduler.cc.o"

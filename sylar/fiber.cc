@@ -17,7 +17,7 @@ static thread_local Fiber::ptr t_threadFiber = nullptr;    // 主协程
 
 // 设置协程栈的大小为1MB
 static ConfigVar<uint32_t>::ptr g_fiber_stack_size = 
-    Config::Lookup<uint32_t>("fiber.stack_size", 1024 * 1024, "fiber stack size");
+    Config::Lookup<uint32_t>("fiber.stack_size", 128 * 1024, "fiber stack size");
 
 // 创建/释放运行栈
 class MallocStackAllocator {
@@ -46,7 +46,7 @@ Fiber::Fiber() {
 
     ++ s_fiber_count;
 
-    SYLAR_LOG_DEBUG(g_logger) << "Fiber::Fiber";
+    SYLAR_LOG_DEBUG(g_logger) << "Fiber::Fiber main";
 }
 
 // 子协程的构造
@@ -99,7 +99,7 @@ Fiber::~Fiber() {
             SetThis(nullptr);
         }
     }
-    SYLAR_LOG_DEBUG(g_logger) << "Fiber::~Fiber id = " << m_id;
+    SYLAR_LOG_DEBUG(g_logger) << "Fiber::~Fiber id = " << m_id <<  " total = " << s_fiber_count;
 }
 
 
@@ -135,7 +135,6 @@ void Fiber::back() {
 void Fiber::call() { // 特殊的swapIn,强行将当前线程置换成目标线程
     SetThis(this);
     m_state = EXEC;
-    // SYLAR_ASSERT(GetThis() == t_threadFiber);
     if(swapcontext(&t_threadFiber->m_ctx, &m_ctx)) {
         SYLAR_ASSERT2(false, "swapcontext");
     }
@@ -174,13 +173,15 @@ Fiber::ptr Fiber::GetThis() {
 
 void Fiber::YieldToReady() {
     Fiber::ptr cur = GetThis();
+    SYLAR_ASSERT(cur->m_state == EXEC);
     cur->m_state = READY;
     cur->swapOut();
 }
 
 void Fiber::YieldToHold() {
-     Fiber::ptr cur = GetThis();
-    cur->m_state = HOLD;
+    Fiber::ptr cur = GetThis();
+    SYLAR_ASSERT(cur->m_state == EXEC);
+    // cur->m_state = HOLD;
     cur->swapOut();
 }
 

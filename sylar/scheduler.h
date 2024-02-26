@@ -46,19 +46,33 @@ public:
 
     // 批量处理调度协程
     template<class InputIterator>
-    void schedule(InputIterator begin, InputIterator end, int thread = -1) {
+    void schedule(InputIterator begin, InputIterator end) {
         bool need_tickle = false;
         {
             MutexType::Lock lock(m_mutex);
             while(begin != end) {
-                need_tickle = scheduleNoLock(&*begin, thread) || need_tickle;
-                ++ begin;
+                need_tickle = scheduleNoLock(&*begin, -1) || need_tickle;
+                ++begin;
             }
         }
-       if(need_tickle) {
+        if(need_tickle) {
             tickle();
         }
     }
+    // template<class InputIterator>
+    // void schedule(InputIterator begin, InputIterator end, int thread = -1) {
+    //     bool need_tickle = false;
+    //     {
+    //         MutexType::Lock lock(m_mutex);
+    //         while(begin != end) {
+    //             need_tickle = scheduleNoLock(&*begin, thread) || need_tickle;
+    //             ++ begin;
+    //         }
+    //     }
+    //    if(need_tickle) {
+    //         tickle();
+    //     }
+    // }
 protected:
     // 通知协程调度器有任务了
     virtual void tickle();

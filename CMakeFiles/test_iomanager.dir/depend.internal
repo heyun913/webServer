@@ -4,11 +4,13 @@
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  ./sylar/config.h
  ./sylar/fiber.h
+ ./sylar/iomanager.h
  ./sylar/log.h
  ./sylar/macro.h
  ./sylar/scheduler.h
  ./sylar/singleton.h
  ./sylar/thread.h
+ ./sylar/timer.h
  ./sylar/util.h
  /root/Web-learning/sylar/tests/test_iomanager.cc
  include/yaml-cpp/binary.h
@@ -42,7 +44,4 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  include/yaml-cpp/stlemitter.h
  include/yaml-cpp/traits.h
  include/yaml-cpp/yaml.h
- sylar/iomanager.h
- sylar/scheduler.h
  sylar/sylar.h
- sylar/timer.h

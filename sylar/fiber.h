@@ -1,9 +1,9 @@
-#ifndef __SYKAR_FIBER_H__
-#define __SYKAR_FIBER_H__
+#ifndef __SYLAR_FIBER_H__
+#define __SYLAR_FIBER_H__
 
 #include <ucontext.h>
 #include <memory>
-#include "thread.h"
+// #include "thread.h"
 #include <functional>
 
 namespace sylar {

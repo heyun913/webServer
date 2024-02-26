@@ -22,6 +22,7 @@ set(LIB_SRC
     sylar/scheduler.cc
     sylar/iomanager.cc
     sylar/timer.cc
+    sylar/hook.cc
     )
 
 add_library(sylar SHARED ${LIB_SRC})
@@ -31,8 +32,10 @@ force_redefine_file_macro_for_sources(sylar) #__FILE__ 重定义该宏为相对�
 
 set(LIB_LIB
     sylar
+    dl
     pthread
     ${YAMLCPP}
+    
     )
 
 add_executable(test tests/test.cc)
@@ -72,6 +75,11 @@ add_executable(test_iomanager tests/test_iomanager.cc)
 add_dependencies(test_iomanager sylar)
 force_redefine_file_macro_for_sources(test_iomanager) #__FILE__ 重定义该宏为相对路径
 target_link_libraries(test_iomanager ${LIB_LIB})
+
+add_executable(test_hook tests/test_hook.cc)
+add_dependencies(test_hook sylar)
+force_redefine_file_macro_for_sources(test_hook) #__FILE__ 重定义该宏为相对路径
+target_link_libraries(test_hook ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

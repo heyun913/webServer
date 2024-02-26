@@ -24,3 +24,5 @@ CXX_INCLUDES = -I/root/Web-learning/sylar/. -I/root/Web-learning/sylar/include
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/timer.cc.o_DEFINES = __FILE__="sylar/timer.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/hook.cc.o_DEFINES = __FILE__="sylar/hook.cc"
+

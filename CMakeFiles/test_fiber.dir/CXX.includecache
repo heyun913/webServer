@@ -45,10 +45,14 @@ ucontext.h
 -
 memory
 -
-thread.h
-./sylar/thread.h
 functional
 -
+
+./sylar/iomanager.h
+scheduler.h
+./sylar/scheduler.h
+timer.h
+./sylar/timer.h
 
 ./sylar/log.h
 string
@@ -116,6 +120,16 @@ semaphore.h
 mutex
 -
 
+./sylar/timer.h
+memory
+-
+set
+-
+vector
+-
+thread.h
+./sylar/thread.h
+
 ./sylar/util.h
 pthread.h
 -
@@ -149,6 +163,10 @@ string
 /root/Web-learning/sylar/sylar/./sylar/fiber.h
 ./sylar/scheduler.h
 /root/Web-learning/sylar/sylar/./sylar/scheduler.h
+./sylar/iomanager.h
+/root/Web-learning/sylar/sylar/./sylar/iomanager.h
+./sylar/timer.h
+/root/Web-learning/sylar/sylar/./sylar/timer.h
 
 /root/Web-learning/sylar/tests/test_fiber.cc
 ../sylar/sylar.h

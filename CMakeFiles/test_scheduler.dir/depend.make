@@ -3,11 +3,13 @@
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/config.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/fiber.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/iomanager.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/log.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/macro.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/scheduler.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/singleton.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/thread.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/timer.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: ./sylar/util.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: sylar/sylar.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o: tests/test_scheduler.cc
