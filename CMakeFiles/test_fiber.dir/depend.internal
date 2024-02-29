@@ -7,6 +7,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
  ./sylar/iomanager.h
  ./sylar/log.h
  ./sylar/macro.h
+ ./sylar/noncopyable.h
  ./sylar/scheduler.h
  ./sylar/singleton.h
  ./sylar/thread.h

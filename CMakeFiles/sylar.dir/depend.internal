@@ -5,6 +5,7 @@ CMakeFiles/sylar.dir/sylar/config.cc.o
  /root/Web-learning/sylar/sylar/config.cc
  /root/Web-learning/sylar/sylar/config.h
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.h
@@ -39,12 +40,24 @@ CMakeFiles/sylar.dir/sylar/config.cc.o
  include/yaml-cpp/stlemitter.h
  include/yaml-cpp/traits.h
  include/yaml-cpp/yaml.h
+CMakeFiles/sylar.dir/sylar/fd_manager.cc.o
+ /root/Web-learning/sylar/sylar/fd_manager.cc
+ /root/Web-learning/sylar/sylar/fd_manager.h
+ /root/Web-learning/sylar/sylar/fiber.h
+ /root/Web-learning/sylar/sylar/hook.h
+ /root/Web-learning/sylar/sylar/iomanager.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
+ /root/Web-learning/sylar/sylar/scheduler.h
+ /root/Web-learning/sylar/sylar/singleton.h
+ /root/Web-learning/sylar/sylar/thread.h
+ /root/Web-learning/sylar/sylar/timer.h
 CMakeFiles/sylar.dir/sylar/fiber.cc.o
  /root/Web-learning/sylar/sylar/config.h
  /root/Web-learning/sylar/sylar/fiber.cc
  /root/Web-learning/sylar/sylar/fiber.h
  /root/Web-learning/sylar/sylar/log.h
  /root/Web-learning/sylar/sylar/macro.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/scheduler.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
@@ -86,14 +99,19 @@ CMakeFiles/sylar.dir/sylar/hook.cc.o
  ./sylar/iomanager.h
  ./sylar/log.h
  ./sylar/macro.h
+ ./sylar/noncopyable.h
  ./sylar/scheduler.h
  ./sylar/singleton.h
  ./sylar/thread.h
  ./sylar/timer.h
  ./sylar/util.h
+ /root/Web-learning/sylar/sylar/fd_manager.h
  /root/Web-learning/sylar/sylar/hook.cc
  /root/Web-learning/sylar/sylar/hook.h
+ /root/Web-learning/sylar/sylar/iomanager.h
+ /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/sylar.h
+ /root/Web-learning/sylar/sylar/thread.h
  include/yaml-cpp/binary.h
  include/yaml-cpp/dll.h
  include/yaml-cpp/emitter.h
@@ -131,6 +149,7 @@ CMakeFiles/sylar.dir/sylar/iomanager.cc.o
  /root/Web-learning/sylar/sylar/iomanager.h
  /root/Web-learning/sylar/sylar/log.h
  /root/Web-learning/sylar/sylar/macro.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/scheduler.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
@@ -140,6 +159,7 @@ CMakeFiles/sylar.dir/sylar/log.cc.o
  /root/Web-learning/sylar/sylar/config.h
  /root/Web-learning/sylar/sylar/log.cc
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.h
@@ -179,6 +199,7 @@ CMakeFiles/sylar.dir/sylar/scheduler.cc.o
  /root/Web-learning/sylar/sylar/hook.h
  /root/Web-learning/sylar/sylar/log.h
  /root/Web-learning/sylar/sylar/macro.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/scheduler.cc
  /root/Web-learning/sylar/sylar/scheduler.h
  /root/Web-learning/sylar/sylar/singleton.h
@@ -186,11 +207,13 @@ CMakeFiles/sylar.dir/sylar/scheduler.cc.o
  /root/Web-learning/sylar/sylar/util.h
 CMakeFiles/sylar.dir/sylar/thread.cc.o
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.cc
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.h
 CMakeFiles/sylar.dir/sylar/timer.cc.o
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/timer.cc
  /root/Web-learning/sylar/sylar/timer.h
@@ -198,6 +221,7 @@ CMakeFiles/sylar.dir/sylar/timer.cc.o
 CMakeFiles/sylar.dir/sylar/util.cc.o
  /root/Web-learning/sylar/sylar/fiber.h
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.cc

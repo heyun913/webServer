@@ -66,6 +66,8 @@ util.h
 thread.h
 /root/Web-learning/sylar/sylar/thread.h
 
+/root/Web-learning/sylar/sylar/noncopyable.h
+
 /root/Web-learning/sylar/sylar/singleton.h
 
 /root/Web-learning/sylar/sylar/thread.h
@@ -81,6 +83,10 @@ semaphore.h
 -
 mutex
 -
+atomic
+-
+noncopyable.h
+/root/Web-learning/sylar/sylar/noncopyable.h
 
 /root/Web-learning/sylar/sylar/util.h
 pthread.h

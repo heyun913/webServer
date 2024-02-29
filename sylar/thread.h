@@ -7,22 +7,20 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <mutex>
+#include <atomic>
+#include "noncopyable.h"
 
 namespace sylar {
 
 
 // 信号量
-class Semaphore {
+class Semaphore : Noncopyable {
 public:
     Semaphore(uint32_t count = 0);
     ~Semaphore();
 
     void wait();
     void notify();
-private:
-    Semaphore(const Semaphore&) = delete;
-    Semaphore(const Semaphore&&) = delete;
-    Semaphore& operator=(const Semaphore&) = delete;
 private:
     sem_t m_semaphpre;
 };
@@ -121,7 +119,7 @@ private:
 };
 
 // 互斥量
-class Mutex {
+class Mutex : Noncopyable {
 public:
     typedef ScopedLockImpl<Mutex> Lock;
 
@@ -147,7 +145,7 @@ private:
 
 
 // 空的Mutex，测试线程安全
-class NullMutex {
+class NullMutex : Noncopyable{
 public:
     typedef ScopedLockImpl<NullMutex> Lock;
     NullMutex() {}
@@ -157,7 +155,7 @@ public:
 };
 
 // 空的读写锁
-class NullRWMutex {
+class NullRWMutex : Noncopyable {
 public:
     typedef ReadScopedLockImpl<NullRWMutex> ReadLock;
     typedef WriteScopedLockImpl<NullRWMutex> WriteLock;
@@ -177,7 +175,7 @@ public:
 };
 
 // 读写锁
-class RWMutex {
+class RWMutex : Noncopyable{
 public:
     typedef ReadScopedLockImpl<RWMutex> ReadLock;
     typedef WriteScopedLockImpl<RWMutex> WriteLock;
@@ -205,7 +203,7 @@ private:
 };
 
 // 优化锁的性能:自旋锁
-class Spinlock {
+class Spinlock : Noncopyable {
 public:
     typedef ScopedLockImpl<Spinlock> Lock;
     Spinlock() {
@@ -227,21 +225,25 @@ private:
 };
 
 // 优化锁：CAS
-// class CASLock{ 
-// public:
-//     CASLock() {
-//         m_mutex.clear();
-//     }
+class CASLock : Noncopyable{ 
+public:
+    CASLock() {
+        m_mutex.clear();
+    }
 
-//     ~CASLock() {
+    ~CASLock() {
 
-//     }
-//     void lock() {
-//         while(std::atomic_flag_test_and_set_explicit(&m_mutex,))
-//     }
-// private:
-//     volatile std::atomic_flag m_mutex;
-// };
+    }
+    void lock() {
+        while(std::atomic_flag_test_and_set_explicit(&m_mutex,std::memory_order_acquire));
+    }
+
+    void unlock() {
+        std::atomic_flag_clear_explicit(&m_mutex, std::memory_order_release);
+    }
+private:
+    volatile std::atomic_flag m_mutex;
+};
 
 
 class Thread {

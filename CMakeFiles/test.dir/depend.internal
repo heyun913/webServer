@@ -3,6 +3,7 @@
 
 CMakeFiles/test.dir/tests/test.cc.o
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/util.h

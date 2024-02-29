@@ -17,6 +17,14 @@ functional
 /root/Web-learning/sylar/sylar/hook.h
 unistd.h
 -
+time.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+sys/ioctl.h
+-
 
 /root/Web-learning/sylar/sylar/iomanager.h
 scheduler.h
@@ -50,6 +58,8 @@ util.h
 thread.h
 /root/Web-learning/sylar/sylar/thread.h
 
+/root/Web-learning/sylar/sylar/noncopyable.h
+
 /root/Web-learning/sylar/sylar/scheduler.h
 memory
 -
@@ -81,6 +91,10 @@ semaphore.h
 -
 mutex
 -
+atomic
+-
+noncopyable.h
+/root/Web-learning/sylar/sylar/noncopyable.h
 
 /root/Web-learning/sylar/sylar/timer.h
 memory
@@ -115,4 +129,14 @@ string
 /root/Web-learning/sylar/sylar/log.h
 ../sylar/iomanager.h
 /root/Web-learning/sylar/sylar/iomanager.h
+sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+string.h
+-
 

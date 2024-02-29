@@ -6,6 +6,7 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o
  /root/Web-learning/sylar/sylar/hook.h
  /root/Web-learning/sylar/sylar/iomanager.h
  /root/Web-learning/sylar/sylar/log.h
+ /root/Web-learning/sylar/sylar/noncopyable.h
  /root/Web-learning/sylar/sylar/scheduler.h
  /root/Web-learning/sylar/sylar/singleton.h
  /root/Web-learning/sylar/sylar/thread.h

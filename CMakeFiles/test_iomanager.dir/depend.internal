@@ -7,6 +7,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  ./sylar/iomanager.h
  ./sylar/log.h
  ./sylar/macro.h
+ ./sylar/noncopyable.h
  ./sylar/scheduler.h
  ./sylar/singleton.h
  ./sylar/thread.h
