@@ -68,8 +68,10 @@ Socket::~Socket() {
 }
 
 int64_t Socket::getSendTimeout() {
+    // 通过句柄管理器获得一个句柄
     FdCtx::ptr ctx = FdMgr::GetInstance()->get(m_sock);
     if(ctx) {
+        // 成功获取则调用Fdctx中的获取超时时间函数，根据传入的参数获取接收超时时间或者发送超时时间
         return ctx->getTimeout(SO_SNDTIMEO);
     }
     return -1;
@@ -94,6 +96,7 @@ void Socket::setRecvTimeout(int64_t v) {
 }
 
 bool Socket::getOption(int level, int option, void* result, size_t* len) {
+    // 调用之前写的hook函数getsockopt，通过socketfd获取详细信息
     int rt = getsockopt(m_sock, level, option, result, (socklen_t*)len);
     if(rt) {
         SYLAR_LOG_DEBUG(g_logger) << "getOption sock = " << m_sock
@@ -117,6 +120,7 @@ bool Socket::setOption(int level, int option, const void* result, size_t len) {
 
 
 Socket::ptr Socket::accept() {
+    // 创建新的socket对象，用于与客户端通信。
     Socket::ptr sock(new Socket(m_family, m_type, m_protocol));
     int newsock = ::accept(m_sock, nullptr, nullptr);
     if(newsock == -1) {
@@ -144,7 +148,9 @@ bool Socket::init(int sock) {
 }
 
 bool Socket::bind(const Address::ptr addr) {
+    // 如果没有socketfd
     if(!isValid()) {
+        // 创建一个Socketfd
         newSock();
         if(SYLAR_UNLIKELY(!isValid())) {
             return false;
@@ -307,10 +313,13 @@ int Socket::recvFrom(iovec* buffers, size_t length, Address::ptr from, int flags
 }
 
 Address::ptr Socket::getRemoteAddress() {
+    // 已经有了直接返回
     if(m_remoteAddress) {
         return m_remoteAddress;
     }
+    // 结果地址
     Address::ptr result;
+    // 根据协议簇创建指定地址
     switch(m_family) {
         case AF_INET:
             result.reset(new IPv4Address());
@@ -324,6 +333,7 @@ Address::ptr Socket::getRemoteAddress() {
             result.reset(new UnknownAddress(m_family));
             break;
     }
+    // 获取地址长度
     socklen_t addrlen = result->getAddrLen();
     if(getpeername(m_sock, result->getAddr(), &addrlen)) {
         SYLAR_LOG_ERROR(g_logger) << "getpeername error sock = " << m_sock

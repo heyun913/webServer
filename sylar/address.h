@@ -44,7 +44,7 @@ public:
     int getFamily() const;
     // 获得sockaddr指针
     virtual const sockaddr* getAddr() const = 0;
-
+    // 获得sockaddr指针（非常量）
     virtual sockaddr* getAddr()  = 0;
 
     // 获得sockaddr长度
@@ -53,6 +53,7 @@ public:
     virtual std::ostream& insert(std::ostream& os) const = 0;
     std::string toString();
 
+    // 比较符
     bool operator<(const Address& rhs) const;
     bool operator==(const Address& rhs) const;
     bool operator!=(const Address& rhs) const;
@@ -100,8 +101,9 @@ public:
     IPAddress::ptr networkAddress(uint32_t prefix_len) override;
     // 返回子网掩码地址
     IPAddress::ptr subnetMask(uint32_t prefix_len) override;
-
+    // 获得端口
     uint32_t getPort() const override;
+    // 设置端口
     void setPort(uint16_t v) override;
 private:
     // Socket结构体
