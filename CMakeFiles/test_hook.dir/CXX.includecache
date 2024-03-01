@@ -25,6 +25,8 @@ sys/socket.h
 -
 sys/ioctl.h
 -
+stdint.h
+-
 
 /root/Web-learning/sylar/sylar/iomanager.h
 scheduler.h

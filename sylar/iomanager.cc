@@ -248,7 +248,7 @@ bool IOManager::cancelAll(int fd) {
     lock.unlock();
 
     FdContext::MutexType::Lock lock2(fd_ctx->mutex);
-    if(fd_ctx->events) {
+    if(!fd_ctx->events) {
         return false;
     }
     // 删除操作
@@ -260,7 +260,7 @@ bool IOManager::cancelAll(int fd) {
 
     int rt = epoll_ctl(m_epfd, op, fd, &epevent);
     if(rt) {
-        SYLAR_LOG_ERROR(g_logger) << "epoll_ctl(" << m_epfd << ", "
+        SYLAR_LOG_ERROR(g_logger) << "epoll_ctl(" << m_epfd << ","
             << op << ","  << fd << "," << epevent.events << "):"
             << rt << " (" << errno << ") (" << strerror(errno) << ")";
         return false;

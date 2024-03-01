@@ -9,4 +9,5 @@
 /root/Web-learning/sylar/CMakeFiles/test_config.dir
 /root/Web-learning/sylar/CMakeFiles/test_thread.dir
 /root/Web-learning/sylar/CMakeFiles/test_util.dir
+/root/Web-learning/sylar/CMakeFiles/test_socket.dir
 /root/Web-learning/sylar/CMakeFiles/test_fiber.dir

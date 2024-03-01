@@ -30,3 +30,5 @@ CXX_INCLUDES = -I/root/Web-learning/sylar/. -I/root/Web-learning/sylar/include
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/address.cc.o_DEFINES = __FILE__="sylar/address.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/socket.cc.o_DEFINES = __FILE__="sylar/socket.cc"
+

@@ -1,11 +1,12 @@
 #ifndef __SYLAR_HOOK_H__
 #define __SYLAR_HOOK_H__
 
-#include<unistd.h>
-#include<time.h>
-#include<sys/types.h>
-#include<sys/socket.h>
+#include <unistd.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 #include <sys/ioctl.h>
+#include <stdint.h>
 
 namespace sylar {
     // 当前线程是否hook
@@ -101,6 +102,8 @@ typedef int (*setsockopt_fun)(int sockfd, int level, int optname,
                 const void *optval, socklen_t optlen);
 extern setsockopt_fun setsockopt_f;
 
+
+extern int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms);
 }
 
 #endif
