@@ -1,4 +1,6 @@
 /root/Web-learning/sylar/CMakeFiles/rebuild_cache.dir
+/root/Web-learning/sylar/CMakeFiles/test_http_parser.dir
+/root/Web-learning/sylar/CMakeFiles/test_http.dir
 /root/Web-learning/sylar/CMakeFiles/edit_cache.dir
 /root/Web-learning/sylar/CMakeFiles/test_address.dir
 /root/Web-learning/sylar/CMakeFiles/test_hook.dir

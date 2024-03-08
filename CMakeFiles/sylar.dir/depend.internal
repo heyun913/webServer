@@ -161,6 +161,64 @@ CMakeFiles/sylar.dir/sylar/hook.cc.o
  include/yaml-cpp/stlemitter.h
  include/yaml-cpp/traits.h
  include/yaml-cpp/yaml.h
+CMakeFiles/sylar.dir/sylar/http/http.cc.o
+ /root/Web-learning/sylar/sylar/http/http.cc
+ /root/Web-learning/sylar/sylar/http/http.h
+ /root/Web-learning/sylar/sylar/http/http11_common.h
+ /root/Web-learning/sylar/sylar/http/http11_parser.h
+ /root/Web-learning/sylar/sylar/http/httpclient_parser.h
+CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o
+ /root/Web-learning/sylar/sylar/http/http11_common.h
+ /root/Web-learning/sylar/sylar/http/http11_parser.h
+ /root/Web-learning/sylar/sylar/http/http11_paser.rl.cc
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o
+ /root/Web-learning/sylar/sylar/http/http.h
+ /root/Web-learning/sylar/sylar/http/http11_common.h
+ /root/Web-learning/sylar/sylar/http/http11_parser.h
+ /root/Web-learning/sylar/sylar/http/http_parser.cc
+ /root/Web-learning/sylar/sylar/http/http_parser.h
+ /root/Web-learning/sylar/sylar/http/httpclient_parser.h
+ include/yaml-cpp/binary.h
+ include/yaml-cpp/dll.h
+ include/yaml-cpp/emitter.h
+ include/yaml-cpp/emitterdef.h
+ include/yaml-cpp/emittermanip.h
+ include/yaml-cpp/emitterstyle.h
+ include/yaml-cpp/exceptions.h
+ include/yaml-cpp/mark.h
+ include/yaml-cpp/node/convert.h
+ include/yaml-cpp/node/detail/impl.h
+ include/yaml-cpp/node/detail/iterator.h
+ include/yaml-cpp/node/detail/iterator_fwd.h
+ include/yaml-cpp/node/detail/memory.h
+ include/yaml-cpp/node/detail/node.h
+ include/yaml-cpp/node/detail/node_data.h
+ include/yaml-cpp/node/detail/node_iterator.h
+ include/yaml-cpp/node/detail/node_ref.h
+ include/yaml-cpp/node/emit.h
+ include/yaml-cpp/node/impl.h
+ include/yaml-cpp/node/iterator.h
+ include/yaml-cpp/node/node.h
+ include/yaml-cpp/node/parse.h
+ include/yaml-cpp/node/ptr.h
+ include/yaml-cpp/node/type.h
+ include/yaml-cpp/noexcept.h
+ include/yaml-cpp/null.h
+ include/yaml-cpp/ostream_wrapper.h
+ include/yaml-cpp/parser.h
+ include/yaml-cpp/stlemitter.h
+ include/yaml-cpp/traits.h
+ include/yaml-cpp/yaml.h
+ sylar/config.h
+ sylar/log.h
+ sylar/noncopyable.h
+ sylar/singleton.h
+ sylar/thread.h
+ sylar/util.h
+CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o
+ /root/Web-learning/sylar/sylar/http/http11_common.h
+ /root/Web-learning/sylar/sylar/http/httpclient_parser.h
+ /root/Web-learning/sylar/sylar/http/httpclient_paser.rl.cc
 CMakeFiles/sylar.dir/sylar/iomanager.cc.o
  /root/Web-learning/sylar/sylar/fiber.h
  /root/Web-learning/sylar/sylar/iomanager.cc

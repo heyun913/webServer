@@ -34,3 +34,11 @@ CXX_INCLUDES = -I/root/Web-learning/sylar/. -I/root/Web-learning/sylar/include
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/bytearray.cc.o_DEFINES = __FILE__="sylar/bytearray.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http.cc.o_DEFINES = __FILE__="sylar/http/http.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o_DEFINES = __FILE__="sylar/http/http11_paser.rl.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o_DEFINES = __FILE__="sylar/http/httpclient_paser.rl.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o_DEFINES = __FILE__="sylar/http/http_parser.cc"
+

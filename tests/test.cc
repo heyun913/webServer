@@ -2,8 +2,9 @@
 #include "../sylar/log.h"
 #include "../sylar/util.h"
 
+sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+
 int main(int argc, char** argv) {
-    // sylar::Logger::ptr logger(new sylar::Logger);
     // logger->addAppender(sylar::LogAppender::ptr(new sylar::StdoutAppender)); 
     
     // sylar::FileLogAppender::ptr file_appender(new sylar::FileLogAppender("./log.txt"));
@@ -18,6 +19,7 @@ int main(int argc, char** argv) {
 
     // auto l = sylar::LoggerMgr::GetInstance()->getLogger("xx");
     // SYLAR_LOG_INFO(l) << "XX";
-    std::cout << "asdasd" << std::endl;
+    // std::cout << "asdasd" << std::endl;
+    SYLAR_LOG_INFO(g_logger) << "asdasd";
     return 0;
 }

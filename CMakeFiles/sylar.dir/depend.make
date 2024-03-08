@@ -161,6 +161,64 @@ CMakeFiles/sylar.dir/sylar/hook.cc.o: include/yaml-cpp/stlemitter.h
 CMakeFiles/sylar.dir/sylar/hook.cc.o: include/yaml-cpp/traits.h
 CMakeFiles/sylar.dir/sylar/hook.cc.o: include/yaml-cpp/yaml.h
 
+CMakeFiles/sylar.dir/sylar/http/http.cc.o: sylar/http/http.cc
+CMakeFiles/sylar.dir/sylar/http/http.cc.o: sylar/http/http.h
+CMakeFiles/sylar.dir/sylar/http/http.cc.o: sylar/http/http11_common.h
+CMakeFiles/sylar.dir/sylar/http/http.cc.o: sylar/http/http11_parser.h
+CMakeFiles/sylar.dir/sylar/http/http.cc.o: sylar/http/httpclient_parser.h
+
+CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o: sylar/http/http11_common.h
+CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o: sylar/http/http11_parser.h
+CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o: sylar/http/http11_paser.rl.cc
+
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/http.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/http11_common.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/http11_parser.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/http_parser.cc
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/http_parser.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/http/httpclient_parser.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/binary.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/dll.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/emitter.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/emitterdef.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/emittermanip.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/emitterstyle.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/exceptions.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/mark.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/convert.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/impl.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/iterator.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/iterator_fwd.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/memory.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/node.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/node_data.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/node_iterator.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/detail/node_ref.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/emit.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/impl.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/iterator.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/node.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/parse.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/ptr.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/node/type.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/noexcept.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/null.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/ostream_wrapper.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/parser.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/stlemitter.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/traits.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: include/yaml-cpp/yaml.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/config.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/log.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/noncopyable.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/singleton.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/thread.h
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o: sylar/util.h
+
+CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o: sylar/http/http11_common.h
+CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o: sylar/http/httpclient_parser.h
+CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o: sylar/http/httpclient_paser.rl.cc
+
 CMakeFiles/sylar.dir/sylar/iomanager.cc.o: sylar/fiber.h
 CMakeFiles/sylar.dir/sylar/iomanager.cc.o: sylar/iomanager.cc
 CMakeFiles/sylar.dir/sylar/iomanager.cc.o: sylar/iomanager.h
