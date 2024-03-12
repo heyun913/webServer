@@ -117,7 +117,7 @@ void on_request_http_field(void *data, const char *field, size_t flen
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
     if(flen == 0) {
         SYLAR_LOG_WARN(g_logger) << "invalid http request field length == 0";
-        parser->setError(1002);
+        // parser->setError(1002);
         return;
     }
     parser->getData()->setHeader(std::string(field, flen)
@@ -159,11 +159,11 @@ uint64_t HttpRequestParser::getContentLength() {
 }
 
 uint64_t HttpRequestParser::GetHttpRequestBufferSize() {
-    return 0;
+    return s_http_request_buffer_size;
 }
 
 uint64_t HttpRequestParser::GetHttpRequestMaxBodySize() {
-    return 0;
+    return s_http_request_max_body_size;
 }
 
 void on_response_reason(void *data, const char *at, size_t length) {

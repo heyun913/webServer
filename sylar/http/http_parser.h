@@ -71,6 +71,8 @@ public:
      * @brief 返回HttpRequest协议的最大消息体大小
      */
     static uint64_t GetHttpRequestMaxBodySize();
+
+    
 private:
     /// http_parser
     http_parser m_parser;

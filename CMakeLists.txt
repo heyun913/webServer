@@ -34,6 +34,9 @@ set(LIB_SRC
     sylar/tcp_server.cc
     sylar/stream.cc
     sylar/streams/socket_stream.cc
+    sylar/http/http_session.cc
+    sylar/http/http_server.cc
+    sylar/http/servlet.cc
     )
 
 add_library(sylar SHARED ${LIB_SRC})
@@ -126,6 +129,11 @@ add_executable(echo_server examples/echo_server.cc)
 add_dependencies(echo_server sylar)
 force_redefine_file_macro_for_sources(echo_server) #__FILE__ 重定义该宏为相对路径
 target_link_libraries(echo_server ${LIB_LIB})
+
+add_executable(test_http_server tests/test_http_server.cc)
+add_dependencies(test_http_server sylar)
+force_redefine_file_macro_for_sources(test_http_server) #__FILE__ 重定义该宏为相对路径
+target_link_libraries(test_http_server ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

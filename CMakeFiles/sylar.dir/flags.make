@@ -48,3 +48,9 @@ CXX_INCLUDES = -I/root/Web-learning/sylar/. -I/root/Web-learning/sylar/include
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o_DEFINES = __FILE__="sylar/streams/socket_stream.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http_session.cc.o_DEFINES = __FILE__="sylar/http/http_session.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http_server.cc.o_DEFINES = __FILE__="sylar/http/http_server.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/servlet.cc.o_DEFINES = __FILE__="sylar/http/servlet.cc"
+
