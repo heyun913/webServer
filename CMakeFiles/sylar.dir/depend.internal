@@ -297,6 +297,24 @@ CMakeFiles/sylar.dir/sylar/socket.cc.o
  /root/Web-learning/sylar/sylar/thread.h
  /root/Web-learning/sylar/sylar/timer.h
  /root/Web-learning/sylar/sylar/util.h
+CMakeFiles/sylar.dir/sylar/stream.cc.o
+ /root/Web-learning/sylar/sylar/bytearray.h
+ /root/Web-learning/sylar/sylar/stream.cc
+ /root/Web-learning/sylar/sylar/stream.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o
+ /root/Web-learning/sylar/sylar/streams/socket_stream.cc
+ /root/Web-learning/sylar/sylar/streams/socket_stream.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/fiber.h
+ sylar/iomanager.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/thread.h
+ sylar/timer.h
+ sylar/util.h
 CMakeFiles/sylar.dir/sylar/tcp_server.cc.o
  /root/Web-learning/sylar/sylar/address.h
  /root/Web-learning/sylar/sylar/config.h

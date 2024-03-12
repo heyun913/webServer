@@ -297,6 +297,24 @@ CMakeFiles/sylar.dir/sylar/socket.cc.o: sylar/thread.h
 CMakeFiles/sylar.dir/sylar/socket.cc.o: sylar/timer.h
 CMakeFiles/sylar.dir/sylar/socket.cc.o: sylar/util.h
 
+CMakeFiles/sylar.dir/sylar/stream.cc.o: sylar/bytearray.h
+CMakeFiles/sylar.dir/sylar/stream.cc.o: sylar/stream.cc
+CMakeFiles/sylar.dir/sylar/stream.cc.o: sylar/stream.h
+
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/streams/socket_stream.cc
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/streams/socket_stream.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/address.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/bytearray.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/fiber.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/iomanager.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/noncopyable.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/scheduler.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/socket.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/stream.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/thread.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/timer.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o: sylar/util.h
+
 CMakeFiles/sylar.dir/sylar/tcp_server.cc.o: sylar/address.h
 CMakeFiles/sylar.dir/sylar/tcp_server.cc.o: sylar/config.h
 CMakeFiles/sylar.dir/sylar/tcp_server.cc.o: sylar/fiber.h
