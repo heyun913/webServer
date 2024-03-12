@@ -51,7 +51,7 @@ public:
     virtual socklen_t getAddrLen() const = 0;
     // 可读性输出地址
     virtual std::ostream& insert(std::ostream& os) const = 0;
-    std::string toString();
+    std::string toString() const;
 
     // 比较符
     bool operator<(const Address& rhs) const;
@@ -166,6 +166,8 @@ public:
 private:
     sockaddr m_addr;
 };
+
+std::ostream& operator<<(std::ostream& os, const Address& addr);
 
 }
 

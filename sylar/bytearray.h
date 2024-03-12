@@ -124,6 +124,8 @@ public:
 
     size_t getSize() const { return m_size; }
 
+   
+
 private:
     // 增加容量
     void addCapacity(size_t size);

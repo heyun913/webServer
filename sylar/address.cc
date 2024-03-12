@@ -230,7 +230,7 @@ int Address::getFamily() const {
     return getAddr()->sa_family;
 }
 
-std::string Address::toString() {
+std::string Address::toString() const{
     std::stringstream ss;
     insert(ss);
     return ss.str();
@@ -540,7 +540,7 @@ UnixAddress::UnixAddress(const std::string& path) {
     if(!path.empty() && path[0] == '\0') {
         -- m_length;
     }
-    if(m_length <= sizeof(m_addr.sun_path)) {
+    if(m_length > sizeof(m_addr.sun_path)) {
         throw std::logic_error("path too long");
     }
     // 将path放入结构体
@@ -602,5 +602,8 @@ std::ostream& UnknownAddress::insert(std::ostream& os) const {
     return os;
 }
 
+std::ostream& operator<<(std::ostream& os, const Address& addr) {
+    return addr.insert(os);
+}
 
 }

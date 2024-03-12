@@ -486,11 +486,15 @@ void ByteArray::read(void* buf, size_t size, size_t position) const{
 
 void ByteArray::setPosition(size_t v) {
     // 如果超出总大小，抛出异常
-    if(v > m_size) {
+    if(v > m_capacity) {
         throw std::out_of_range("set_position out of range");
     }
     // 更新当前操作位置
     m_position = v;
+
+    if(m_position > m_size) {
+        m_size = m_position;
+    }
 
     // 链表遍历到当前位置
     m_cur = m_root;
@@ -504,7 +508,6 @@ void ByteArray::setPosition(size_t v) {
         m_cur = m_cur->next;
     }
 }
-
 
 bool ByteArray::writeToFile(const std::string& name) const {
     std::ofstream ofs;
@@ -604,7 +607,7 @@ std::string ByteArray::toHexString() const {
             ss << std::endl;
         }
         ss << std::setw(2) << std::setfill('0') << std::hex
-           << (int)(uint8_t)str[i] << "";
+           << (int)(uint8_t)str[i] << " ";
     }
     return ss.str();
 }

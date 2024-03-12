@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o"
   "CMakeFiles/sylar.dir/sylar/http/httpclient_paser.rl.cc.o"
   "CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o"
+  "CMakeFiles/sylar.dir/sylar/tcp_server.cc.o"
   "lib/libsylar.pdb"
   "lib/libsylar.so"
 )
