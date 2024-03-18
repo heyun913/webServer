@@ -382,6 +382,26 @@ ctype.h
 string.h
 -
 
+/root/Web-learning/sylar/sylar/http/http_connection.cc
+http_connection.h
+/root/Web-learning/sylar/sylar/http/http_connection.h
+http_parser.h
+/root/Web-learning/sylar/sylar/http/http_parser.h
+sylar/log.h
+/root/Web-learning/sylar/sylar/http/sylar/log.h
+
+/root/Web-learning/sylar/sylar/http/http_connection.h
+sylar/streams/socket_stream.h
+/root/Web-learning/sylar/sylar/http/sylar/streams/socket_stream.h
+http.h
+/root/Web-learning/sylar/sylar/http/http.h
+sylar/uri.h
+/root/Web-learning/sylar/sylar/http/sylar/uri.h
+sylar/thread.h
+/root/Web-learning/sylar/sylar/http/sylar/thread.h
+list
+-
+
 /root/Web-learning/sylar/sylar/http/http_parser.cc
 http_parser.h
 /root/Web-learning/sylar/sylar/http/http_parser.h
@@ -711,6 +731,22 @@ vector
 -
 thread.h
 /root/Web-learning/sylar/sylar/thread.h
+
+/root/Web-learning/sylar/sylar/uri.h
+memory
+-
+string
+-
+stdint.h
+-
+address.h
+/root/Web-learning/sylar/sylar/address.h
+
+/root/Web-learning/sylar/sylar/uri.rl.cc
+uri.h
+/root/Web-learning/sylar/sylar/uri.h
+sstream
+-
 
 /root/Web-learning/sylar/sylar/util.cc
 util.h
@@ -1285,6 +1321,16 @@ vector
 -
 thread.h
 sylar/thread.h
+
+sylar/uri.h
+memory
+-
+string
+-
+stdint.h
+-
+address.h
+sylar/address.h
 
 sylar/util.h
 pthread.h

@@ -171,6 +171,29 @@ CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o
  /root/Web-learning/sylar/sylar/http/http11_common.h
  /root/Web-learning/sylar/sylar/http/http11_parser.h
  /root/Web-learning/sylar/sylar/http/http11_paser.rl.cc
+CMakeFiles/sylar.dir/sylar/http/http_connection.cc.o
+ /root/Web-learning/sylar/sylar/http/http.h
+ /root/Web-learning/sylar/sylar/http/http11_common.h
+ /root/Web-learning/sylar/sylar/http/http11_parser.h
+ /root/Web-learning/sylar/sylar/http/http_connection.cc
+ /root/Web-learning/sylar/sylar/http/http_connection.h
+ /root/Web-learning/sylar/sylar/http/http_parser.h
+ /root/Web-learning/sylar/sylar/http/httpclient_parser.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/fiber.h
+ sylar/iomanager.h
+ sylar/log.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/singleton.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/streams/socket_stream.h
+ sylar/thread.h
+ sylar/timer.h
+ sylar/uri.h
+ sylar/util.h
 CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o
  /root/Web-learning/sylar/sylar/http/http.h
  /root/Web-learning/sylar/sylar/http/http11_common.h
@@ -437,6 +460,10 @@ CMakeFiles/sylar.dir/sylar/timer.cc.o
  /root/Web-learning/sylar/sylar/timer.cc
  /root/Web-learning/sylar/sylar/timer.h
  /root/Web-learning/sylar/sylar/util.h
+CMakeFiles/sylar.dir/sylar/uri.rl.cc.o
+ /root/Web-learning/sylar/sylar/address.h
+ /root/Web-learning/sylar/sylar/uri.h
+ /root/Web-learning/sylar/sylar/uri.rl.cc
 CMakeFiles/sylar.dir/sylar/util.cc.o
  /root/Web-learning/sylar/sylar/fiber.h
  /root/Web-learning/sylar/sylar/log.h

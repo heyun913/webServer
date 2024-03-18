@@ -1,4 +1,6 @@
 /root/Web-learning/sylar/CMakeFiles/rebuild_cache.dir
+/root/Web-learning/sylar/CMakeFiles/test_uri.dir
+/root/Web-learning/sylar/CMakeFiles/test_http_connection.dir
 /root/Web-learning/sylar/CMakeFiles/test_http_server.dir
 /root/Web-learning/sylar/CMakeFiles/test_socket.dir
 /root/Web-learning/sylar/CMakeFiles/edit_cache.dir

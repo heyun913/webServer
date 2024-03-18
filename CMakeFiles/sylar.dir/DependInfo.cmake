@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Web-learning/sylar/sylar/hook.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/hook.cc.o"
   "/root/Web-learning/sylar/sylar/http/http.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http.cc.o"
   "/root/Web-learning/sylar/sylar/http/http11_paser.rl.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http11_paser.rl.cc.o"
+  "/root/Web-learning/sylar/sylar/http/http_connection.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http_connection.cc.o"
   "/root/Web-learning/sylar/sylar/http/http_parser.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o"
   "/root/Web-learning/sylar/sylar/http/http_server.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http_server.cc.o"
   "/root/Web-learning/sylar/sylar/http/http_session.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/http/http_session.cc.o"
@@ -26,6 +27,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Web-learning/sylar/sylar/tcp_server.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/tcp_server.cc.o"
   "/root/Web-learning/sylar/sylar/thread.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/thread.cc.o"
   "/root/Web-learning/sylar/sylar/timer.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/timer.cc.o"
+  "/root/Web-learning/sylar/sylar/uri.rl.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/uri.rl.cc.o"
   "/root/Web-learning/sylar/sylar/util.cc" "/root/Web-learning/sylar/CMakeFiles/sylar.dir/sylar/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
